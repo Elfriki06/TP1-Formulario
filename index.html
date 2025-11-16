@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Págna de prueba</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="Parte lógica del formulario.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+      (function() {
+         emailjs.init("-np1nLDzWlUCEg2tP"); 
+      })(); 
+    </script>
+  </head>
+  <body>
+    <form id="formulario" method="POST">
+      <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="nombreHelp">
+      <p></p>
+      <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Correo</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
+      <p></p>
+      <div class="mb-3">
+      <label for="consulta" class="form-label">Asunto</label>
+      <input type="text" class="form-control" name="asunto" id="consulta">
+      <p></p>
+      <div class="mb-3">
+      <label for="mensaje" class="form-label">Mensaje</label>
+      <input type="text" class="form-control" name="mensaje" id="mensaje">
+      <p></p>
+      </div>
+      <div class="mb-3 form-check">
+      </div>
+      <div class="g-recaptcha"
+        data-sitekey="6LfNw_srAAAAAKEwgeFcbjKlCQUBVqn9haeDi7Q0"
+        data-callback="recaptchaVerificado" 
+        data-expired-callback="recaptchaExpirado"></div>
+      <p></p>
+      <button type="submit" class="btn btn-primary" id="boton" disabled>Enviar</button>
+    </form>
+  </body>
+</html>
